@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Classbook-zaloguj się</title>
+		<link rel="shortcut icon" href="style/img/logo.gif" />
+		<link rel="stylesheet" href="style/style.css"  type="text/css" />
+		<link rel="stylesheet" href="css/fontello.css"  type="text/css" />
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="jquery/jquery.scrollTo.min.js"></script>
+		<script src="function.js"></script>
+	</head>
+	<body>
+		<div class="view_info" id="where_div_view">
+			<div class="profile_view_info">
+
+			</div>	
+			<div class="view_info_name_user">
+				<a href="profile.php?id='.$id_user.'" style="text-decoration:none;">Joanna Kowalska</a>
+			</div>
+			<div class="delete_view_info" onclick="view_info()">
+				x
+			</div>
+			<div class="view_info_content">
+				Potwierdziła znajomość
+			</div>
+		</div>
+		<div class="tag_news">03:23:2041
+			<div class="div_news_friends">
+				<div class="news_post_info">
+					<a href="profile.php?id='.$id_user.'" class="user_news">
+						<div profile class="div_profile_news"></div>
+						<div class="text_news">
+							<div class="name_user_news">Jan kowalski</div>
+							<div class="content_news">Zaprosił cię do znajomych</div>
+						</div>										
+					</a>
+				</div>
+				<div class="buttom_accepted_add_friend" onclick="friends(), accepting_knowledge(1,'.$id_user.'), view_news()">Akceptuj</div>
+				<div class="buttom_accepted_add_friend" onclick="friends(), accepting_knowledge(0,'.$id_user.'), view_news()">Odrzuć</div>
+			</div>
+		</div>
+
+	</body>
+</html>
