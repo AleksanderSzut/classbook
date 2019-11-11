@@ -154,13 +154,10 @@
 
 						$k2 =$l3+$l4;
 						$k3 = ($k1+$k2);
-						$keys = sha1($k3/rand(80000,90000000));
-
-
+						$keys = round($k3/rand(1,15));
 						$year = date("Y");
 						$month = date("m");
 						$day = date('d');
-
 						if($connection->query("INSERT INTO users VALUES (NULL, '$email', NULL, '$pass_hash', '$name', '$last_name', '$birthday_year', '$birthday_month', '$birthday_day', '$gender', '$keys', 0, 0, 0, '$year', '$month', $day,0)"))
 						{
 								$result = $connection->query("SELECT * FROM users WHERE email='$email'");

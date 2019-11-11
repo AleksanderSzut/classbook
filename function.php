@@ -1,7 +1,5 @@
 <?php
 
-
-
 	function text_month($month)
 	{
 		switch($month)
@@ -339,7 +337,7 @@
 	
 	}
 
-
+	
 	class user
 	{
 		var $id_user ;
@@ -636,148 +634,6 @@
         }
     }
 
-
-    abstract class uploadFile
-    {
-        protected $file, $exten;
-        public $errno ,$errDesc, $folder;
-
-        public function __construct($file)
-        {
-            $this->file = $file;
-
-            $this->errno = $file['error'];
-
-            if ($file['error'] > 0)
-            {
-
-                switch ($file['error'])
-                {
-
-                    // jest większy niż domyślny maksymalny rozmiar,
-                    // podany w pliku konfiguracyjnym
-                    case 1: {$this->errDesc = 'Rozmiar pliku jest zbyt duży.'; break;}
-
-                    // jest większy niż wartość pola formularza
-                    // MAX_FILE_SIZE
-                    case 2: {$this->errDesc = 'Rozmiar pliku jest zbyt duży.'; break;}
-
-                    // plik nie został wysłany w całości
-                    case 3: {$this->errDesc = 'Plik wysłany tylko częściowo.'; break;}
-
-                    // plik nie został wysłany
-                    case 4: {$this->errDesc = 'Nie wysłano żadnego pliku.'; break;}
-
-                    // pozostałe błędy
-                    default: {$this->errDesc = 'Wystąpił błąd podczas wysyłania.';
-                        break;}
-                }
-                return false;
-            }
-
-            return true;
-
-
-        }
-        protected function getType()
-        {
-            return $this->file['type'];
-        }
-        protected function getExten()
-        {
-            $file = $this->file;
-
-            $fileName = explode(".", $file['name']);
-            $extension =  $fileName[count($fileName)-1];
-            $this->exten = $extension;
-        }
-        function saveFile($name)
-        {
-            $file = $this->file;
-
-            $extension = $this->exten;
-
-            $location = $this->folder.'/'.$name.'.'.$extension;
-
-            if(is_uploaded_file($file['tmp_name']))
-            {
-                if(!move_uploaded_file($file['tmp_name'], $location))
-                {
-                    echo 'problem: Nie udało się skopiować pliku do katalogu.';
-                    return false;
-                }
-            }
-            else
-            {
-                echo 'Plik nie został zapisany.';
-                return false;
-            }
-            return true;
-        }
-    }
-
-    class uploadImg extends uploadFile
-    {
-        private $imgId;
-
-        public function getDbId()
-        {
-            return $this->imgId;
-        }
-
-        private function addToDb($exten)
-        {
-            include "connect.php";
-
-            $date = date("U");
-            //dokończ $name (id zakodowanie w md5  z solą      )
-            if($connection->query("INSERT INTO img (id, name, extension, date) VALUES(NULL, '$name','$exten', '$date')"))
-            {
-                $result = $connection->query("SELECT * FROM img ORDER BY id DESC");
-
-                $row = $result->fetch_assoc();
-
-                return $row['id'];
-            }
-            else
-
-                return false;
-        }
-        private function checkImgType($type)
-        {
-            switch ($type)
-            {
-                case 'image/jpeg':
-                    $allOk=TRUE;
-                    break;
-                case 'image/png':
-                    $allOk=TRUE;
-                    break;
-                default:
-                    $allOk = false;
-            }
-            return $allOk;
-        }
-        public function saveImg()
-        {
-            $this->getExten();
-
-            if(!$this->checkImgType($this->getType()))
-                return "00.Nie poprawne rozszerzenie";
-            if(!$idImg = $this->addToDb($this->exten))
-                return "00.Błąd bazy danych";
-            else
-                $this->imgId = $idImg;
-
-            if($this->saveFile($idImg))
-                return "11.img/".$idImg.".".$this->exten;
-            else
-                return 0;
-
-        }
-    }
-
-
     class img
     {
         
@@ -873,7 +729,9 @@
                     </html>';
 
 
-        return @mail($email, 'Witaj', $wiadomosc, $naglowki);
-
+        if(mail($email, 'Witaj', $wiadomosc, $naglowki))
+        {
+            echo 'Wiadomość została wysłana';
+        }
     }
 ?>

@@ -182,7 +182,7 @@
 						</div>
 						<div style="height:70%;width:100%;margin-left:auto; margin-right:auto;">
 							<form method="get">
-								<input type="text" <?php
+								<input type="number" <?php 			
 								if(isset($_SESSION['e_aktywacja']))
 								{
 									echo 'placeholder="Zły kod aktywacyjny" class="e_activate_inp_keys"';

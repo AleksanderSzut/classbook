@@ -8,7 +8,6 @@ function size_screen()
         alert("twoja rozdzielczość może być za mała radzimy pomniejszyć stronę");
     }
 }
-
 function like(type, id_post, num_like) 
 {
     var xmlhttp = new XMLHttpRequest();
@@ -38,7 +37,6 @@ function like(type, id_post, num_like)
     xmlhttp.open("GET", "ajax_like.php?id_post=" + id_post + "&& type=" + type, true);
     xmlhttp.send();
 }
-
 function menuExpand(objectName)
 {
     document.getElementById(objectName).style.transform = "display:block";
@@ -89,7 +87,6 @@ function add_friends(id_user)
     xmlhttp.open("GET", "ajax_add_friends.php?id_user=" + id_user, true);
     xmlhttp.send();
 }
-
 function accepting_knowledge(type, id_user)
 {
     var xmlhttp = new XMLHttpRequest();
@@ -123,7 +120,6 @@ function view_news()
     xmlhttp.open("GET", "ajax_view_news.php", true);
     xmlhttp.send();
 }
-
 function amount_of_news()
 {
     var xmlhttp = new XMLHttpRequest();
@@ -138,18 +134,20 @@ function amount_of_news()
            else
                document.getElementById("number_news").style.display="none";
 
+
+           
+           
+            console.log(text);
         }
     }
     xmlhttp.open("GET", "ajax_view_amount_of_notifications.php?type=1", true);
     xmlhttp.send();
     setTimeout("amount_of_news()",1000);
 }
-
 function open_news()
 {
     document.getElementById('number_news').style.display='block';
 }
-
 function view_info()
 {
     document.getElementById("div_info").innerHTML = "";
@@ -168,7 +166,6 @@ function view_info()
     xmlhttp.open("GET", "ajax_view_info.php", true);
     xmlhttp.send();
 }
-
 jQuery(function($)
 {
     //zresetuj scrolla
@@ -222,7 +219,6 @@ function add_post(type)
     setTimeout("add_post()", 60000);
 
 }
-
 function add_post_type(type,type_file)
 {
     switch(type) 
@@ -240,7 +236,6 @@ function add_post_type(type,type_file)
         
     }
 }
-
 function add_post_file(type)
 {
     if(document.getElementById('checkbox_newpost').checked)var wartosc = document.getElementById('checkbox_newpost').value;
@@ -255,23 +250,23 @@ function add_post_file(type)
         formularz.append("file", file); //dodajemy do formularza pole z naszym plikiem
         formularz.append("post", post); //dodajemy do formularza pole z naszym plikiem
         formularz.append("view", wartosc); //dodajemy do formularza pole z naszym plikiem
-
+         
         var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function()
+        xhr.onreadystatechange = function() 
         {
-            if (xhr.readyState == 4 && xhr.status == 200)
-            {
+            if (xhr.readyState == 4 && xhr.status == 200) 
+            {      
                 document.getElementById("div_info").innerHTML = xhr.responseText;
-
+               
                 view_post(type_viewPost);
-
+                
             }
             else
             {
                 document.getElementById("div_info").innerHTML =xhr.responseText;
-
+              
                 view_post(type_viewPost);
-
+                
             }
         }
         xhr.open("POST", "ajax_add_post_img.php", true);
@@ -280,9 +275,9 @@ function add_post_file(type)
     else
     {
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function()
+        xmlhttp.onreadystatechange = function() 
         {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
             {
                 if(xmlhttp.responseText == 0)
                 {
@@ -308,79 +303,50 @@ function add_post_file(type)
     }
 
 }
-
-function preview_uploadImg(formId)
+function view_img()
 {
-
-    console.log("startPrev");
-    const $div = $('.previewImgWrapper');
-    $div.html('Ładowanie');
-
-    if(file = document.getElementById(formId).files[0])
+    if(file = document.getElementById("inp_post_img").files[0])
     {
-        var form = new FormData();
-        form.append("file", file);
-
+        var formularz = new FormData(); //tworzymy nowy formularz do wysłania
+        formularz.append("file", file); //dodajemy do formularza pole z naszym plikiem
+         
+        /* wysyłamy formularz za pomocą AJAX */
         var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function()
+        xhr.onreadystatechange = function() 
         {
-            if (xhr.readyState == 4 && xhr.status == 200)
-            {
-                console.log("start");
-                var result = xhr.responseText;
-                var lengthResult = result.length;
-
-                var contentResult = result.slice(3, lengthResult);
-                var errorResult = result.slice(0, 1);
-
-                console.log(errorResult);
-
-                if(errorResult == 1)
-                {
-                    console.log(result);
-                    $div.html('<img style="" src="'+contentResult+'"/>');
-                }
-                else
-                {
-                    $div.html(contentResult);
-                }
-
+            if (xhr.readyState == 4 && xhr.status == 200) 
+            {      
+                document.getElementById("upload_img_add_post").innerHTML = xhr.responseText;
+            
             }
             else
             {
-                console.log("błąd");
+
+                document.getElementById("upload_img_add_post").innerHTML = "problem";
             }
         }
-        xhr.open("POST", "ajax_uploadImg.php", true);
-        xhr.send(form);
-
-
-    }
-    else
-    {
-        console.log("nie");
-
+        xhr.open("POST", "ajax_preview_img.php", true);
+        xhr.send(formularz);
     }
 }
 
 function search()
 {
     var q = document.getElementById("q").value;
-
+    
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function()
+    xmlhttp.onreadystatechange = function() 
     {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-        {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+        {      
             document.getElementById("result_ajax_search").innerHTML = xmlhttp.responseText;
-
+        
         }
     }
     xmlhttp.open("GET", "ajax_search.php?q=" + q, true);
     xmlhttp.send();
-
+    
 }
-
 function view_search_div(type)
 {
     if(type != 1)
@@ -393,14 +359,13 @@ function view_search_div(type)
 
     }
 }
-
-function add_profile()
+function add_profile() 
 {
     var file=document.getElementById("file").files[0];
-
+     
     var formularz=new FormData(); //tworzymy nowy formularz do wysłania
     formularz.append("file", file); //dodajemy do formularza pole z naszym plikiem
-
+     
     /* wysyłamy formularz za pomocą AJAX */
     var xhr=new XMLHttpRequest();
     xhr.upload.addEventListener("progress", progress, false);
@@ -408,34 +373,56 @@ function add_profile()
     xhr.addEventListener("error", error, false);
     xhr.addEventListener("abort", stop, false);
     xhr.open("POST", "./ajax_upload_profile.php", true);
+    xhr.send(formularz);
 }
-
-function delete_post(id_post)
+ 
+function progress(event) 
+{
+    var procent=Math.round((event.loaded/event.total)*100);
+    document.getElementById("progress").innerHTML="Wysłano "+conbajt(event.loaded)+" z "+conbajt(event.total)+" ("+procent+"%)";
+    document.getElementById("progress").value=procent;
+}
+ 
+function end(event) 
+{
+    document.getElementById("status").innerHTML=event.target.responseText;
+    location.reload()
+}
+ 
+function error(event) 
+{
+    document.getElementById("status").innerHTML="Wysyłanie nie powiodło się";
+}
+ 
+function stop(event) 
+{
+    document.getElementById("status").innerHTML="Wysyłanie zostało przerwane";
+}
+ function delete_post(id_post)
 {
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function()
+    xmlhttp.onreadystatechange = function() 
     {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
         {
             document.getElementById("div_info").innerHTML = xmlhttp.responseText;
-            view_post(2);
+            view_post(2);   
         }
     }
     xmlhttp.open("GET", "ajax_delete_post.php?id_post="+id_post, true);
     xmlhttp.send();
 }
-
 function view_post(type)
 {
     type_viewPost = type;
     var formularz = new FormData(); //tworzymy nowy formularz do wysłania
     formularz.append("type", type); //dodajemy do formularza pole z naszym plikiem
-
+     
     var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function()
+    xhr.onreadystatechange = function() 
     {
-        if (xhr.readyState == 4 && xhr.status == 200)
-        {
+        if (xhr.readyState == 4 && xhr.status == 200) 
+        {   
             document.getElementById("view_post").innerHTML = xhr.responseText;
 
         }
@@ -445,14 +432,13 @@ function view_post(type)
 
 
 }
-
 function view_tables_group()
 {
     var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function()
+    xhr.onreadystatechange = function() 
     {
-        if (xhr.readyState == 4 && xhr.status == 200)
-        {
+        if (xhr.readyState == 4 && xhr.status == 200) 
+        {   
             document.getElementById("view_tabele_group").innerHTML = xhr.responseText;
 
         }
@@ -460,15 +446,14 @@ function view_tables_group()
     xhr.open("POST", "ajax_view_tabele_group.php", true);
     xhr.send();
 }
-
 function join_group(idG)
 {
-
+    
     var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function()
+    xhr.onreadystatechange = function() 
     {
-        if (xhr.readyState == 4 && xhr.status == 200)
-        {
+        if (xhr.readyState == 4 && xhr.status == 200) 
+        {   
             document.getElementById("div_info").innerHTML = xhr.responseText;
 
         }

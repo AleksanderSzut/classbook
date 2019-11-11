@@ -135,12 +135,17 @@
 									echo '
 									<div class="div_add_profile"><i class="icon-camera"></i>
 										<div class="menu_add_profile">
-											<form enctype="multipart/form-data" id="" method="post">
-											    <input type="file" name="file" style="display:none;" id="fileProf" onChange="'."preview_uploadImg('fileProf')".'" />
-											    <label for="fileProf" class="inp_add_profile">Wybierz zdjęcie</label>
-											    <div class="info_add_profile previewImgWrapper" >Zdjęcie profilowe może mieć maksymalnie 2 mb. </br>Najlepsza proporcja zdjęcia to 1:1 </div>
+											<form enctype="multipart/form-data"  method="post">
+											    <input type="file" name="file" style="display:none;" id="file" />
+											    <label for="file" class="inp_add_profile">Wybierz zdjęcie</label>
+											    <div class="info_add_profile">Zdjęcie profilowe może mieć maksymalnie 2 mb. </br>Najlepsza proporcja zdjęcia to 1:1 </div>
 											    <input type="submit" class="button_add_profile" value="Ustaw" onclick="add_profile()"/>
 											</form>
+											<section >
+											    <h3>Postęp wysyłania</h3>
+											    <output id="status">Wybierz plik i naciśnij <i>Ustaw</i>.</output>
+											    <progress value="0" max="100" id="progress"></progress>
+											</section>
 										</div>
 									</div>';
 								}
