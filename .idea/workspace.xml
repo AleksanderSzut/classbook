@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45d492ea-001b-4190-b6a8-deccf57c77fa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="45d492ea-001b-4190-b6a8-deccf57c77fa" name="Default" comment="vcs update">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/function.js" beforeDir="false" afterPath="$PROJECT_DIR$/function.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/function.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,99 +18,42 @@
       <executable />
     </execution>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2380">
-              <caret line="140" column="77" selection-start-line="140" selection-start-column="77" selection-end-line="140" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax_upload_profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/function.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="335" column="4" selection-start-line="335" selection-start-column="4" selection-end-line="335" selection-end-column="4" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="n#!!block;n#size_screen#0" />
-                <element signature="n#!!block;n#like#0" />
-                <element signature="n#!!block;n#menuExpand#0" />
-                <element signature="n#!!block;n#online#0" />
-                <element signature="n#!!block;n#friends#0" />
-                <element signature="n#!!block;n#add_friends#0" />
-                <element signature="n#!!block;n#accepting_knowledge#0" />
-                <element signature="n#!!block;n#view_news#0" />
-                <element signature="n#!!block;n#amount_of_news#0" />
-                <element signature="n#!!block;n#open_news#0" />
-                <element signature="n#!!block;n#view_info#0" />
-                <element signature="n#!!block;n#add_post#0" />
-                <element signature="n#!!block;n#add_post_type#0" />
-                <element signature="n#!!block;n#add_post_file#0" />
-                <element signature="n#!!block;n#view_search_div#0" />
-                <element signature="n#!!block;n#add_profile#0" />
-                <element signature="n#!!block;n#delete_post#0" />
-                <element signature="n#!!block;n#view_post#0" />
-                <element signature="n#!!block;n#view_tables_group#0" />
-                <element signature="n#!!block;n#join_group#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax_uploadImg.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/function.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="711" column="53" selection-start-line="711" selection-start-column="53" selection-end-line="711" selection-end-column="53" />
-              <folding>
-                <element signature="n#text_month#0;n#!!top" />
-                <element signature="n#convert_time#0;n#!!top" />
-                <element signature="n#view_profile#0;n#!!top" />
-                <element signature="n#view_boxPost#0;n#!!top" />
-                <element signature="n#view_nav#0;n#!!top" />
-                <element signature="n#view_search#0;n#!!top" />
-                <element signature="n#view_rightDiv#0;n#!!top" />
-                <element signature="n#loadingRing#0;n#!!top" />
-                <element signature="n#onloadBodyJs#0;n#!!top" />
-                <element signature="n#view_info#0;n#!!top" />
-                <element signature="n#convert_number_of_img#0;n#!!top" />
-                <element signature="n#convert_unix_date#0;n#!!top" />
-                <element signature="n#user#0;n#!!top" />
-                <element signature="n#news#0;n#!!top" />
-                <element signature="n#friend#0;n#!!top" />
-                <element signature="n#group#0;n#!!top" />
-                <element signature="n#img#0;n#!!top" />
-                <element signature="n#profile#0;n#!!top" />
-                <element signature="n#createUrl#0;n#!!top" />
-                <element signature="n#send_email_activation#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="classbok" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="classbok" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="classbok" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="classbook: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="classbok" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="classbook: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="users: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -119,56 +65,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/ajax_view_tabele_group.php" />
-        <option value="$PROJECT_DIR$/start.php" />
-        <option value="$PROJECT_DIR$/activate.php" />
-        <option value="$PROJECT_DIR$/ajax_add_post_img.php" />
-        <option value="$PROJECT_DIR$/loadFile.php" />
-        <option value="$PROJECT_DIR$/img.php" />
-        <option value="$PROJECT_DIR$/profile.php" />
-        <option value="$PROJECT_DIR$/function.js" />
-        <option value="$PROJECT_DIR$/ajax_uploadImg.php" />
-        <option value="$PROJECT_DIR$/function.php" />
-      </list>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\xampp\htdocs\classbook\.idea" />
+      </set>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="classbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="classbook" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="classbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="classbook" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
+  <component name="ProjectId" id="1TfeINt9qMtfiqDXlOpmqcXM8Ff" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/xampp/htdocs/classbook/function.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -203,227 +113,38 @@
       <workItem from="1534762361640" duration="8064000" />
       <workItem from="1537559732810" duration="47000" />
       <workItem from="1537559951817" duration="41000" />
-      <workItem from="1573432660468" duration="147000" />
+      <workItem from="1573432660468" duration="1580000" />
+      <workItem from="1573855504694" duration="1808000" />
+      <workItem from="1574508526461" duration="1775000" />
     </task>
+    <task id="LOCAL-00001" summary="vcs update">
+      <created>1573432844454</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573432844454</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33942000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18869936" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32946146" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32946146" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18230277" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32946146" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32946146" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/logout.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload/icon200p.png" />
-    <entry file="file://$PROJECT_DIR$/upload/20915578_1934000116866531_128399703975056805_n.jpg" />
-    <entry file="file://$PROJECT_DIR$/upload/_558f99fb02d93.gif" />
-    <entry file="file://$PROJECT_DIR$/ajax_friends.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload/19073865_270520893415494_1921797555_n.png" />
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1026" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/start.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="169" column="32" selection-start-line="169" selection-start-column="32" selection-end-line="169" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/activate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="184" column="49" selection-start-line="184" selection-start-column="49" selection-end-line="184" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/index.php" />
-    <entry file="file://$PROJECT_DIR$/../testAjaxUpload/img/plik_obrazkowy.php" />
-    <entry file="file://$PROJECT_DIR$/ajax_add_post_img.php" />
-    <entry file="file://$PROJECT_DIR$/style/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="1275" column="17" lean-forward="true" selection-start-line="1275" selection-start-column="17" selection-end-line="1275" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_add_friends.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_add_post.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connect.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_view_tabele_group.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_view_post.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_view_news.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_view_info.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-950" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_join_group.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_like.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_online.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2380">
-          <caret line="140" column="77" selection-start-line="140" selection-start-column="77" selection-end-line="140" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_upload_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="335" column="4" selection-start-line="335" selection-start-column="4" selection-end-line="335" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#!!block;n#size_screen#0" />
-            <element signature="n#!!block;n#like#0" />
-            <element signature="n#!!block;n#menuExpand#0" />
-            <element signature="n#!!block;n#online#0" />
-            <element signature="n#!!block;n#friends#0" />
-            <element signature="n#!!block;n#add_friends#0" />
-            <element signature="n#!!block;n#accepting_knowledge#0" />
-            <element signature="n#!!block;n#view_news#0" />
-            <element signature="n#!!block;n#amount_of_news#0" />
-            <element signature="n#!!block;n#open_news#0" />
-            <element signature="n#!!block;n#view_info#0" />
-            <element signature="n#!!block;n#add_post#0" />
-            <element signature="n#!!block;n#add_post_type#0" />
-            <element signature="n#!!block;n#add_post_file#0" />
-            <element signature="n#!!block;n#view_search_div#0" />
-            <element signature="n#!!block;n#add_profile#0" />
-            <element signature="n#!!block;n#delete_post#0" />
-            <element signature="n#!!block;n#view_post#0" />
-            <element signature="n#!!block;n#view_tables_group#0" />
-            <element signature="n#!!block;n#join_group#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax_uploadImg.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="711" column="53" selection-start-line="711" selection-start-column="53" selection-end-line="711" selection-end-column="53" />
-          <folding>
-            <element signature="n#text_month#0;n#!!top" />
-            <element signature="n#convert_time#0;n#!!top" />
-            <element signature="n#view_profile#0;n#!!top" />
-            <element signature="n#view_boxPost#0;n#!!top" />
-            <element signature="n#view_nav#0;n#!!top" />
-            <element signature="n#view_search#0;n#!!top" />
-            <element signature="n#view_rightDiv#0;n#!!top" />
-            <element signature="n#loadingRing#0;n#!!top" />
-            <element signature="n#onloadBodyJs#0;n#!!top" />
-            <element signature="n#view_info#0;n#!!top" />
-            <element signature="n#convert_number_of_img#0;n#!!top" />
-            <element signature="n#convert_unix_date#0;n#!!top" />
-            <element signature="n#user#0;n#!!top" />
-            <element signature="n#news#0;n#!!top" />
-            <element signature="n#friend#0;n#!!top" />
-            <element signature="n#group#0;n#!!top" />
-            <element signature="n#img#0;n#!!top" />
-            <element signature="n#profile#0;n#!!top" />
-            <element signature="n#createUrl#0;n#!!top" />
-            <element signature="n#send_email_activation#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="vcs update" />
+    <option name="LAST_COMMIT_MESSAGE" value="vcs update" />
   </component>
 </project>

@@ -168,6 +168,12 @@ function view_info()
 }
 jQuery(function($)
 {
+    $(window).scroll(function()
+        {
+            if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+            else $('.scrollup').fadeOut();
+        }
+    );
     //zresetuj scrolla
     $.scrollTo(0);
             
@@ -175,12 +181,6 @@ jQuery(function($)
 }
 );
 
-$(window).scroll(function()
-{
-    if($(this).scrollTop()>300) $('.scrollup').fadeIn();
-    else $('.scrollup').fadeOut();      
-}
-);
 
 function add_post(type)
 {

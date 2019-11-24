@@ -634,74 +634,102 @@
         }
     }
 
-    class img
+    abstract class uploadFile
     {
-        
-        function preview_img()
+        protected $file, $exten, $dir;
+        public $errno, $errDesc;
+
+        public function __construct($file, $dir)
         {
-            return $_SESSION['upload_file'];
+            $this->file = $file;
+            $this->dir = $dir;
+
+            if ($file['error'] > 0) {
+                $this->errno = $file['error'];
+
+                switch ($file['error']) {
+
+                    // jest większy niż domyślny maksymalny rozmiar,
+                    // podany w pliku konfiguracyjnym
+                    case 1:
+                        {
+                            $this->errDesc = 'Rozmiar pliku jest zbyt duży.';
+                            break;
+                        }
+
+                    // jest większy niż wartość pola formularza
+                    // MAX_FILE_SIZE
+                    case 2:
+                        {
+                            $this->errDesc = 'Rozmiar pliku jest zbyt duży.';
+                            break;
+                        }
+
+                    // plik nie został wysłany w całości
+                    case 3:
+                        {
+                            $this->errDesc = 'Plik wysłany tylko częściowo.';
+                            break;
+                        }
+
+                    // plik nie został wysłany
+                    case 4:
+                        {
+                            $this->errDesc = 'Nie wysłano żadnego pliku.';
+                            break;
+                        }
+
+                    // pozostałe błędy
+                    default:
+                        {
+                            $this->errDesc = 'Wystąpił błąd podczas wysyłania.';
+                            break;
+                        }
+                }
+                return false;
+            }
+
+            return true;
+
+
         }
-        function upload()
+        protected function getType()
         {
-            $id = $_SESSION['id'];
-            require "connect.php";
-            $date = date("U");
-            
-            $folder_upload="./upload";
-            $plik_nazwa=$_FILES['file']['name'];
-            $plik_lokalizacja=$_FILES['file']['tmp_name']; //tymczasowa lokalizacja pliku
-            $plik_mime=$_FILES['file']['type']; //typ MIME pliku wysłany przez przeglądarkę
-            $plik_rozmiar=$_FILES['file']['size'];
-            $plik_blad=$_FILES['file']['error']; //kod błędu
+            return $this->file['type'];
+        }
+        protected function getExten()
+        {
+            $file = $this->file;
 
-            /* sprawdzenie, czy plik został wysłany */
-            if (!$plik_lokalizacja) {
-                exit("Nie wysłano żadnego pliku");
-            }
+            $fileName = explode(".", $file['name']);
+            $extension = $fileName[count($fileName) - 1];
+            $this->exten = $extension;
+        }
+        function saveFile($name)
+        {
 
-            /* sprawdzenie błędów */
-            switch ($plik_blad) {
-                case UPLOAD_ERR_OK:
-                    break;
-                case UPLOAD_ERR_NO_FILE:
-                    exit("Brak pliku.");
-                    break;
-                case UPLOAD_ERR_INI_SIZE:
-                case UPLOAD_ERR_FORM_SIZE:
-                    exit("Przekroczony maksymalny rozmiar pliku.");
-                    break;
-                default:
-                    exit("Nieznany błąd.");
-                    break;
-            }
+            $file = $this->file;
 
-            /* sprawdzenie rozszerzenia pliku - dzięki temu mamy pewność, że ktoś nie zapisze na serwerze pliku .php */
-            $dozwolone_rozszerzenia=array("jpeg", "jpg", "tiff", "tif", "png", "gif");
-            $plik_rozszerzenie=pathinfo(strtolower($plik_nazwa), PATHINFO_EXTENSION);
-            if (!in_array($plik_rozszerzenie, $dozwolone_rozszerzenia, true)) {
-                exit("Niedozwolone rozszerzenie pliku.");
-            }
+            $extension = $this->exten;
 
-            /* przeniesienie pliku z folderu tymczasowego do właściwej lokalizacji */
-            if (!move_uploaded_file($plik_lokalizacja, $folder_upload."/".$plik_nazwa)) {
-                exit("Nie udało się przenieść pliku.");
+            $location = '../'.$this->dir.'/' . $name . '.' . $extension;
+
+            if (is_uploaded_file($file['tmp_name'])) {
+                if (!move_uploaded_file($file['tmp_name'], $location)) {
+                    echo 'problem: Nie udało się skopiować pliku do katalogu.';
+                    return false;
+                }
+            } else {
+                echo 'problem: Możliwy atak podczas przesyłania pliku.';
+                echo 'Plik nie został zapisany.';
+                return false;
             }
-            $fp = fopen($folder_upload."/".$plik_nazwa, "w");
-            $data = fread($fp, filesize($fp));
-            $_SESSION['preview_img'];
-            unlink($folder_upload."/".$plik_nazwa);
-            
-           
+            return true;
         }
     }
-    class profile
-    {
-        public function add_profile()
-        {
-            $img = new img;
-            $img->upload();
-        }
-    }
+
+
+
 
 
     function createUrl($text_url)
