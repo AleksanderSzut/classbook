@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45d492ea-001b-4190-b6a8-deccf57c77fa" name="Default" comment="vcs update">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/function.js" beforeDir="false" afterPath="$PROJECT_DIR$/function.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/function.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,6 +113,8 @@
       <workItem from="1573432660468" duration="1580000" />
       <workItem from="1573855504694" duration="1808000" />
       <workItem from="1574508526461" duration="1775000" />
+      <workItem from="1574596337756" duration="597000" />
+      <workItem from="1575125923189" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="vcs update">
       <created>1573432844454</created>
